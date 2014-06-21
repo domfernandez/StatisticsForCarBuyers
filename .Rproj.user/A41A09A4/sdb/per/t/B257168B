@@ -1,0 +1,16 @@
+{
+    "contents" : "---\ntitle       : Statistics for Car Buyers\nsubtitle    : \nauthor      : Lakin Ducker\njob         : \nframework   : io2012        # {io2012, html5slides, shower, dzslides, ...}\nhighlighter : highlight.js  # {highlight.js, prettify, highlight}\nhitheme     : tomorrow      # \nwidgets     : []            # {mathjax, quiz, bootstrap}\nmode        : selfcontained # {standalone, draft}\nknit        : slidify::knit2slides\n---\n\n## Buying fuel efficient car is difficult!\n\n* There are so many variables\n* Too much information!\n* It can make your head explode!!\n* Fixing an exploaded head would be even more expensive than buying a car!!!\n\n--- .class #id \n\n## Have you ever wondered whether a manual or automatic transmission car is better for MPG?\n\n```{r fig.width=8, fig.height=5}\ndata(mtcars); library(ggplot2)\nmtcars$am <- factor(mtcars$am,levels=c(0,1), labels=c(\"Automatic\",\"Manual\")) # create factor\nqplot(wt, mpg, data=mtcars, geom=c(\"point\", \"smooth\"), method=\"lm\", formula=y~x, color=am, \n      main=\"wt versus mpg\", xlab=\"wt\", ylab=\"mpg\")\n```\n\n--- .class #id\n\n## Have you ever wanted to fit a statistical model using different car variables?\n\nOf course, you have!!!\n\n```{r}\nsummary(lm(mpg ~ cyl + disp + hp + drat + wt + am, mtcars))$coeff\n```\n\n--- .class #id\n\n## You need to go to Statistics for Car Buyers\n\n* Go to [Statistics for Car Buyers](http://hcol.shinyapps.io/StatisticsForCarBuyers)!!!\n* Or car shop at your own peril.\n\n\n\n\n\n",
+    "created" : 1403313412869.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "894786012",
+    "id" : "B257168B",
+    "lastKnownWriteTime" : 1403305471,
+    "path" : "D:/R_DataProducts/slides2/index.Rmd",
+    "project_path" : null,
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}
